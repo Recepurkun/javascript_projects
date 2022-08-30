@@ -1,6 +1,6 @@
 # Javascript Odev - 1 || Clock.js
 
-![image](/image.jpg)
+![image](image.jpg)
 
 # **Installation**
 
