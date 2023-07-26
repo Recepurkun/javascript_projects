@@ -1,3 +1,5 @@
+// ! use "better Comments" for better documentation
+
 // function method1(){
 //     var sayi = 10
 // }
