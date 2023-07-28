@@ -234,57 +234,101 @@
 // }
 
 // * Ürün Arama Uygulaması
-let urun1 = {
-  isim: "ACER Swiftt",
-  kategori: "Teknoloji",
-  fiyat: 6.219
-}
+// let urun1 = {
+//   isim: "ACER Swiftt",
+//   kategori: "Teknoloji",
+//   fiyat: 6.219
+// }
 
-let urun2 = {
-  isim: "ACER Nitro 5",
-  kategori: "Teknoloji",
-  fiyat: 15.475
-}
+// let urun2 = {
+//   isim: "ACER Nitro 5",
+//   kategori: "Teknoloji",
+//   fiyat: 15.475
+// }
 
-let urun3 = {
-  isim: "LENOVO V15",
-  kategori: "Teknoloji",
-  fiyat: 10.999
-}
-let urun4 = {
-  isim: "LENOVO V14",
-  kategori: "Teknoloji",
-  fiyat: 4.399
-}
-let urun5 = {
-  isim: "LENOVO Ideapad",
-  kategori: "Teknoloji",
-  fiyat: 4.510
-}
+// let urun3 = {
+//   isim: "LENOVO V15",
+//   kategori: "Teknoloji",
+//   fiyat: 10.999
+// }
+// let urun4 = {
+//   isim: "LENOVO V14",
+//   kategori: "Teknoloji",
+//   fiyat: 4.399
+// }
+// let urun5 = {
+//   isim: "LENOVO Ideapad",
+//   kategori: "Teknoloji",
+//   fiyat: 4.510
+// }
 
-let urunler = [urun1,urun2,urun3,urun4,urun5]
-let arananUrun = prompt("Lutfen aramak istediginiz urunu girin: ")
-let secilenUrun = []
+// let urunler = [urun1,urun2,urun3,urun4,urun5]
+// let arananUrun = prompt("Lutfen aramak istediginiz urunu girin: ")
+// let secilenUrun = []
 
-secilenUrunleriDoldur(urunler)
-secilenUrunleriYazdir(secilenUrun)
+// secilenUrunleriDoldur(urunler)
+// secilenUrunleriYazdir(secilenUrun)
 
-function secilenUrunleriDoldur(urunler)
-{
-  urunler.forEach(function(urun)
-  { 
-    if(urun.isim.toUpperCase().includes(arananUrun.toUpperCase(),0))
-    {
-      secilenUrun.push(urun)
-    }
-  })
-}
+// function secilenUrunleriDoldur(urunler)
+// {
+//   urunler.forEach(function(urun)
+//   { 
+//     if(urun.isim.toUpperCase().includes(arananUrun.toUpperCase(),0))
+//     {
+//       secilenUrun.push(urun)
+//     }
+//   })
+// }
 
-function secilenUrunleriYazdir(urunler)
-{
-  urunler.forEach(function(urun)
-  {
-    console.log("-------------------------------------")
-    console.log(" | " + urun.isim + " | " + urun.kategori + " | " + urun.fiyat)
-  })
-}
+// function secilenUrunleriYazdir(urunler)
+// {
+//   urunler.forEach(function(urun)
+//   {
+//     console.log("-------------------------------------")
+//     console.log(" | " + urun.isim + " | " + urun.kategori + " | " + urun.fiyat)
+//   })
+// }
+
+// * Date kullanimi
+// let tarih = new Date()
+// console.log(tarih)
+
+
+// ? Ilkel (Primitive) Veri Türleri:  String, Number, Boolean, Undefined, Null, Symbol
+// ? Ilkel olmayan (Referance) Veri Türleri: Object, Array, Function
+
+let a = 7
+let b = a
+
+console.log("a: " + a)
+console.log("b: " + b)
+
+if(a==b)
+  console.log("esittir")
+else
+  console.log("esit degildir.")
+
+let dizi1 = [1,2,3]
+let dizi2 = [1,2,3]
+
+console.log("dizi1: " + dizi1)
+console.log("dizi2: " + dizi2)
+
+if(dizi1==dizi2)
+  console.log("esittir")
+else
+  console.log("esit degildir.")
+
+console.log(" --------------------------- ")
+let dizi3 = [4,5,6]
+let dizi4 = dizi3
+
+console.log("dizi3: " + dizi3)
+console.log("dizi4: " + dizi4)
+
+dizi4.push(15)
+console.log(" - dizi4'e push ettikten sonra - ")
+// dizi4'e push etmemize ragmen dizi3'te de gormemizin sebebi ikisinin de heap'te ayni yeri gostermesinden kaynaklanmaktadir. Referans olarak heapte
+// tutulan alani isaret ediyor ikisi de. Bu yuzden birinde yaptigimiz degisiklik digerini de etkiliyor.
+console.log("dizi3: " + dizi3)
+console.log("dizi4: " + dizi4)
