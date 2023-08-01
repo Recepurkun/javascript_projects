@@ -245,7 +245,7 @@ console.log(todoList)
 //   console.log(e.type)
 // }
 
-// Klavye Eventleri
+// * Klavye Eventleri
 
 //keypress: harf ve sayilarda tetiklenen eventtir
 //keydown: klavyedeki butun tuslarda tetiklenen eventtir(hepsinde calisir)
@@ -266,6 +266,7 @@ console.log(todoList)
 //   e.preventDefault()
 // }
 
+// ? input'a girdigin kelimeleri harf harf konsola yazdirma
 // const cardTitle = document.querySelectorAll(".card-title")[0]
 // const input = document.querySelector("#todoName")
 
@@ -275,3 +276,77 @@ console.log(todoList)
 //   cardTitle.textContent = e.target.value
 //   console.log(e.target.value)
 // }
+
+// * Input Eventleri
+//focus: inputun icine tikladiginda tetiklenir.
+//blur: inputun icinden cikarken tetiklenir.
+//copy: inputun icerisindeki metni kopyaladıgında tetiklenir.
+//paste: inputun icerisine metin yapistirdiginizda tetiklenir.
+//cut: inputun icerisindeki metni kestiginizde tetiklenir.
+//select: inputun icerisindeki metni secip biraktiginzda tetiklenir.
+
+// let todo = document.querySelector("#todoName")
+// todo.addEventListener("focus", run)
+// todo.addEventListener("blur", run)
+// todo.addEventListener("copy", run)
+// todo.addEventListener("paste", run)
+// todo.addEventListener("cut", run)
+// todo.addEventListener("select", run)
+// function run(e){
+//   console.log(e.type)
+// }
+
+// * Session Storage Kullanimi
+// Deger ekleme
+// sessionStorage.setItem("350","Recep")
+// sessionStorage.setItem("146","Ali")
+// sessionStorage.setItem("612","Veli")
+// sessionStorage.setItem(131,27) //numerik bir deger eklesen bile string olarak kaydedilir.
+
+// Deger silme
+// sessionStorage.removeItem("612")
+
+// let value = sessionStorage.getItem("350")//keyini ver karsilik gelen valueyi al
+// console.log(value)
+
+// Hepsini sil
+// sessionStorage.clear()
+
+// let value = sessionStorage.getItem(131)
+// console.log(typeof value) //string
+
+// ? Session Storage - Array Yazdirma
+// let names = ["Recep","Ali","Veli","Mehmet","Gokturk"]
+// sessionStorage.setItem("Names",JSON.stringify(names)) //array olarak veriyoruz
+
+// let value = JSON.parse(sessionStorage.getItem("Names")) //array olarak alıyoruz
+// value.forEach(name => {
+//   console.log(name)
+// });
+// console.log(typeof value)
+
+// * Local Storage Kullanimi
+// Deger ekleme
+// localStorage.setItem("motion1","Push Up")
+// localStorage.setItem("motion2","Barfix")
+// localStorage.setItem("motion3","Burpee")
+// localStorage.setItem("motion4","Squat")
+
+// Degeri Almak
+// let value = localStorage.getItem("motion2")
+// console.log(value)
+
+// Degeri Silmek
+//localStorage.removeItem("motion4")
+
+// Tumunu Temizle
+// localStorage.clear()
+
+// ? Local Storage - Array Yazdirma
+// let motions = ["Push Up","Barfix","Burpee","Squat","Chin Up"]
+// localStorage.setItem("motions",JSON.stringify(motions))
+// let value = JSON.parse(localStorage.getItem("motions"))
+// value.forEach(motion => {
+//   console.log(motion)
+// });
+// console.log(typeof value)
