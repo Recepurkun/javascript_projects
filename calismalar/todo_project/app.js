@@ -52,12 +52,13 @@ function removeTodoUI(e){
         if(Question == true){
             todo.remove()
             showAlert("success","Todo basariyla silindi.")
+            //storage'den silmek
+            removeTodoLocalStorage(todo.textContent)
         }
         else{
             showAlert("info","Silme İşleminden Vazgeçildi.")
         }
-        //storage'den silmek
-        removeTodoLocalStorage(todo.textContent)
+
         //console.log(e.target.value) üzerinde çalış
     }
     e.preventDefault()
@@ -161,21 +162,3 @@ function showAlert(type,messsage){ //ekranda duruma gore alert goster
     div.remove()
    }, 2000);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(form)
-// console.log(addInput)
-// console.log(todoList)
-// console.log(firstCardBody)
-// console.log(secondCardBody)
-// console.log(clearButton)
