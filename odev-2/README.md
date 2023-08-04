@@ -6,7 +6,7 @@
 
 Öncelikle projeyi clonelayın.
 ```
-git clone https://github.com/Recepurkun/javascript-projects.git
+git clone https://github.com/Recepurkun/javascript_projects/tree/master/odev-2
 ```
 
 # **Usage**
