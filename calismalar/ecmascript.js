@@ -248,3 +248,113 @@
 // getUserById(8)
 
 //! OOP'ye giris(Nesne yonelimli)
+// class Insan{
+//     constructor(isim,soyisim,yas,maas){
+//         this.isim = isim;
+//         this.soyisim = soyisim;
+//         this.maas = maas;
+//         this.yas = yas;
+//     }
+//     bilgileriGoster(){
+//         console.log(`Isim: ${this.isim} | Soyisim: ${this.soyisim} | Yas: ${this.yas} | Maas: ${this.maas} `);
+//     }
+// }
+// const insan1 = new Insan("Recep","Urkun",24,15000)
+// insan1.bilgileriGoster()
+
+//! Static Anahtari kullanimi
+// class Matematik{
+
+//     topla(a,b){
+//         console.log(a+b)
+//     }
+//     cikar(a,b){
+//         console.log(a-b)
+//     }
+//     carp(a,b){
+//         console.log(a*b)
+//     }
+//     static bol(a,b){
+//         console.log(a/b)
+//     }
+
+// }
+
+// const mat1 = new Matematik()
+// mat1.carp(3,7)
+//Matematik.bol(12,4) //static fonk. erismek icin nesne ismi uzerinden erisebilirsin
+// at1.bol(48,2) -> bu sekilde erisemezsin cunku "böl" static olarak tanimli bu yuzden nesne uzerunden erisilemez
+
+//? Static olarak tanimlanmamissa NESNE uzerinden erisilebilir
+//? Static ise CLASS ISMI uzerunden erisilir
+
+//! Inheritance(Miras Alma-Kalıtım) Kavrami
+// class Person{
+//     firstName = "Recep";
+//     write(){
+//         console.log("Person Write: ", this.firstName)
+//     }
+// }
+
+// class Student extends Person{
+//     write(){
+//         console.log("Student Write: ", this.firstName)
+//         super.write() // super anahtar kelimesi ile bir ust metoda erisebiliyoruz
+//     }
+// }
+
+// const student1 = new Student()
+// student1.write()
+
+//! Inheritance ile hayatimiza giren kelimeler:
+//super: ust sinifi gosterir 
+//super(): 
+
+// class Person{
+//     firstName = "Recep"
+//     write(firstName){
+//         console.log(this.firstName)
+//     }
+// }
+
+// class Student extends Person{
+//     write(){
+//         super.write()//kalitim aldigimiz classin metoduna eristik "super" ile
+//     }
+// }
+
+//? super() ornegi
+class Person{
+    constructor(firstName, lastName, salary){
+        this.firstName = firstName
+        this.lastName = lastName
+        this.salary = salary
+    }
+    writeInfo(){
+        console.log(this.firstName, this.lastName, this.salary)
+    }
+}
+
+class Student extends Person{
+    constructor(firstName, lastName, salary){
+        super(firstName, lastName, salary)
+    }
+    writeInfo(){
+        super.writeInfo()
+    }
+}
+
+class Engineer extends Person{
+    constructor(firstName, lastName, salary){
+        super(firstName, lastName, salary)
+    }
+    bilgileriGoster(){
+        super.writeInfo()
+    }
+}
+
+const student1 = new Student("Recep","Urkun",15000)
+const engineer1 = new Engineer("Ali","Veli",10000)
+
+student1.writeInfo()
+engineer1.bilgileriGoster()
