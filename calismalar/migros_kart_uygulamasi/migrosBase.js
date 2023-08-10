@@ -20,8 +20,8 @@ class migrosBase{
             }
             else{
                 //money karti yoktur
-                this.urunler.forEach((urun)=>{
-                    odenecekTutar += urun.fiyat;
+                this.urunler.forEach(function(urun){
+                    odenecekTutar += urun.fiyat
                 })
             }
 
@@ -33,7 +33,7 @@ class migrosBase{
     }
 
     urunleriKontrolEt(urunler){
-        if(urunler != null & urunler.length>0){
+        if(urunler.length > 0 && urunler != null){
             return true;
         }
         return false;

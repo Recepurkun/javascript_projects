@@ -26,22 +26,21 @@ const urunler = [
 ]
 
 let sonuc = confirm(mesaj);
-let odenecekTutar2;
+let odenecekTutar;
 
 if(sonuc){
+    let isim = prompt("Isminiz: ")
+    let soyisim = prompt("Soyisminiz: ")
     //Money karti vardir
-    let isim = prompt("Isminizi giriniz: ");
-    let soyisim = prompt("Soyisminizi giriniz: ")
-    
-    //const musteri = new musteri(isim,soyisim,sonuc,urunler)
-    const musteri = new Musteri(isim, soyisim, sonuc, urunler)
-    odenecekTutar2 = musteri.hesapla()
+    const musteri1 = new Musteri(isim, soyisim, sonuc, urunler)
+    odenecekTutar = musteri1.hesapla()
 
-    alert(`Musteri Bilgileri: ${isim} ${soyisim} | Odenecek Tutar: ${odenecekTutar2} TL`)
+    alert(`Musteri Bilgileri: ${isim} ${soyisim} | Odenecek Tutar: ${odenecekTutar} TL`)
 }
 else{
     //Money karti yoktur
-    const musteri = new Musteri(null, null, sonuc, urunler)
-    odenecekTutar2 = musteri.hesapla()
-    alert(`Odenecek Tutar: ${odenecekTutar2} TL`)
+    const musteri2 = new Musteri(null, null, sonuc, urunler)
+    odenecekTutar = musteri2.hesapla()
+    
+    alert(`Odenecek Tutar: ${odenecekTutar} TL`)
 }
